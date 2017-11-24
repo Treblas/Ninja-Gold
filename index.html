@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<head>
+	<title>Ninja Gold</title>
+	<style type="text/css">
+		#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+#myBar {
+    width: 0%;
+    height: 66px;
+    background-color: gold;
+    color:black;
+    font-weight:bolder;
+    font-size:30px;
+    padding:12px;
+}
+	</style>
+</head>
+<body>
+	<div id = "container">
+		<img src = "images/pokeninja.gif" style = "height: 110px;width: 110px;"></div>
+		<div class = "page-wholes" >
+			
+				<div class ="form-inline" >
+					<center>
+						<div class="container">
+  						<div class="modal fade" id="myModal" role="dialog" style="background-color:transparent;">
+   							 <div class="modal-dialog modal-md" >
+    						  <div class="modal-content">
+     						   <div class="modal-header">
+      						    <button type="button" class="close" data-dismiss="modal">&times;</button>
+      						    <p><img src="images/about-the-game.png" height="450px" width="350px;"></p>
+      						 </div>
+     						 </div>
+   						 </div>
+ 						 </div>
+						</div>
+						<img src="images/logo-game.png" style="margin-top:20px;" height="360px" width="330px;">
+					<br>
+					<hr id="hr2">
+					<hr id="hr22">
+					<hr id="hr222">
+
+					<center><a href="about.html"><img src="images/about-btn.png" title="About" class="settings" style="margin-top:2px;"  height="120px" width="150px;"></a>
+
+						<a href="index.html" onclick="move();"><img src="images/play-btn.png" class="settings" title="Play" style="margin-top:2px;"  height="120px" width="150px;"></a>
+						
+						<a href="#"><img src="images/quit-btn.png" class="settings" title="Quit" style="margin-top:2px;" id="btn-quit"  height="120px" width="150px;"></a>
+					</center>
+					<br>
+						</div>
+					</div>
+				</div>
+				<div id="myProgress">
+  					<div id="myBar">
+  						<center><button onclick="move();" style="background-color: transparent;border:none;position:absolute;top:470px;left:640px;" ><img src="images/play-btn.png" class="settings" title="Play" style="margin-top:2px;"  height="120px" width="150px;"></button></center>
+  						<label style="float:right;">0%</label>
+  					</div>
+				</div>
+			<script type="text/javascript" src = "js/jquery.min.js"></script>
+			<script type="text/javascript" src = "js/bootstrap.js"></script>
+			<script>
+				function move() {
+    				var elem = document.getElementById("myBar"); 
+    				var width = 10;
+    				var id = setInterval(frame, 10);
+    			
+    			function frame() {
+       				 if (width >= 100) {
+          				  clearInterval(id);
+          				  window.location.href = "game!!.html";
+
+       				 } else {
+         			   width++; 
+            		   elem.style.width = width + '%'; 
+                       elem.innerHTML = width * 1 + '%';
+        }
+    }
+}
+				$(function(){
+					$('#btn-quit').click(function() {
+						
+					alert("Are you sure do you want to Quit the Game?");
+ 					window.location.href = "index.html";					});
+					});
+		</script>
+		</body>
+		</html>
